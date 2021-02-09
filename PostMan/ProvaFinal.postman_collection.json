@@ -1,0 +1,163 @@
+{
+	"info": {
+		"_postman_id": "163b253f-8be4-4cb0-a81f-fb0dc41b6815",
+		"name": "ProvaFinal",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Pokedex",
+			"item": [
+				{
+					"name": "PostPokedex",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idPokemon\":12,\r\n    \"nivelPokemon\":15,\r\n    \"idLocal\":5,\r\n    \"idUsuario\":1,\r\n    \"tipoPokebola\":\"MASTERBALL\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/pokedex",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pokedex"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetPokemon",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/pokedex/1/pokemon",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pokedex",
+								"1",
+								"pokemon"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeletePokemon",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/pokedex/pokemon/1/libertar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pokedex",
+								"pokemon",
+								"1",
+								"libertar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetPokemonById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/pokedex/1/pokemon/150",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pokedex",
+								"1",
+								"pokemon",
+								"150"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Troca",
+			"item": [
+				{
+					"name": "getPokemonTroca",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"pokemonTroca\":2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/troca/abrir",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"troca",
+								"abrir"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetTrocasAbertas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PostRealizarTroca",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
